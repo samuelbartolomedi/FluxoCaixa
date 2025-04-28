@@ -1,11 +1,9 @@
-<!-- activity_main.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Tipo -->
     <TextView
         android:id="@+id/tvTipo"
         android:layout_width="wrap_content"
@@ -17,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- Detalhe -->
     <TextView
         android:id="@+id/tvDetalhe"
         android:layout_width="wrap_content"
@@ -29,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- Valor -->
     <TextView
         android:id="@+id/tvValor"
         android:layout_width="wrap_content"
@@ -42,18 +38,11 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal" />
 
-    <!-- Data -->
     <TextView
         android:id="@+id/tvData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data lançamento:" />
-
-    <!-- Buttons -->
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="289dp" />
 
     <Button
         android:id="@+id/btnLancamento"
