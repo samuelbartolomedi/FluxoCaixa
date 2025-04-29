@@ -1,4 +1,6 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,57 +10,123 @@
         android:id="@+id/tvTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tipo:" />
+        android:layout_marginTop="4dp"
+        android:text="Tipo:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toEndOf="@+id/tvTipo"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvDetalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detalhe:" />
+        android:layout_marginTop="20dp"
+        android:text="Detalhe:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
 
     <Spinner
         android:id="@+id/spinnerDetalhe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toEndOf="@+id/tvDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTipo" />
 
     <TextView
         android:id="@+id/tvValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor:" />
-
-    <EditText
-        android:id="@+id/etValor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+        android:layout_marginTop="20dp"
+        android:text="Valor:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetalhe" />
 
     <TextView
         android:id="@+id/tvData"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data lançamento:" />
+        android:layout_height="14dp"
+        android:layout_marginTop="20dp"
+        android:text="Data lançamento:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
 
     <Button
         android:id="@+id/btnLancamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lançar" />
+        android:layout_marginTop="20dp"
+        android:text="Lançar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDataLancamento" />
 
     <Button
         android:id="@+id/btnVerLancamentos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Lançamentos" />
+        android:layout_marginTop="20dp"
+        android:text="Ver Lançamentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaldo" />
 
     <Button
         android:id="@+id/btnSaldo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Saldo" />
-</LinearLayout>
+        android:layout_marginTop="20dp"
+        android:text="Saldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLancamento" />
+
+    <EditText
+        android:id="@+id/etDataLancamento"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toEndOf="@+id/tvData"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toEndOf="@+id/tvValor"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDetalhe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
